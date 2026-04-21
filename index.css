@@ -18,24 +18,29 @@ h1, h2 {
 	letter-spacing: 3px;  
     line-height: 1.2;
 }
-/* Uniquement pour les écrans de moins de 768px (téléphones et tablettes) */
 @media (max-width: 768px) {
     .signe {
-        gap: 40px; 
-        padding: 20px;
+        display: flex;
+        justify-content: center; /* Centre le signe sur l'écran */
+        align-items: center;
+        gap: 10px; /* Un tout petit écart au départ */
+        width: 100%;
+        overflow: hidden; /* Empêche le scroll horizontal si ça dépasse */
     }
 
     .signe img {
-        width: 145px; /* On réduit la taille des mains pour que ça tienne en largeur */
+        width: 100px; /* Taille réduite pour mobile */
+        height: auto;
+        transition: transform 0.4s ease; /* Pour que le mouvement soit fluide */
     }
 
-    /* On ajuste la translation pour que les mains se touchent sans déborder */
+    /* Quand on touche l'écran (hover ou active) */
     .signe:hover .main-l, .signe:active .main-l {
-        transform: translateX(20px) ;
+        transform: translateX(15px); /* Ajuste ce chiffre pour qu'elles se touchent */
     }
 
     .signe:hover .main-r, .signe:active .main-r {
-        transform: translateX(-20px) ;
+        transform: translateX(-15px);
     }
 }
 summary {
