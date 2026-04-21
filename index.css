@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+
+body {
+    font-family: Brutalista, sans-serif;
+	background:#0062FF;
+    border: 20px solid #0062FF;        
+    outline: 10px solid #7E348B;       
+    outline-offset: -30px;     
+    margin: 0; 
+    min-height: 100vh; 
+    padding: 40px; 
+    box-sizing: border-box; 
+}
+h1, h2 {
+    font-family: Brutalista, sans-serif;
+	
+	letter-spacing: 3px;  
+    line-height: 1.2;
+}
+
+summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+nav { 
+    font-family: Alegreya;
+	
+	letter-spacing: 3px;  
+    line-height: 1.2;
+}
+nav a {
+    text-decoration: none;
+    color: turquoise; 
+    font-size: 30px; 
+    font-weight: bold;
+	margin-bottom: 40px;
+}
+nav a:hover {
+	transform: scale(1.2);
+}
+	img[src*="d&p"] { 
+    width: 125px;
+    height: 116px;
+
+}	
+img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 
+        0 0 0 5px #7E348B,
+        0 0 0 10px #014EA6;
+    margin-bottom: 20px; 
+    user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+}
+li {
+	margin: 15px;
+}
+.signe {
+    display: flex;
+    cursor: pointer;
+    padding: 50px;
+    overflow: visible;
+    perspective: 200px;
+	margin-bottom: 67px;
+	margin-top: 67px;
+}
+
+.signe img {
+    width: 229px; 
+	height: auto ;
+    transition:transform 0.5s ease-in-out ; 
+    box-shadow: none;
+}
+
+.cadre-Y {
+	border: 2px solid turquoise ;
+    border-radius: 5px
+}
+
+.signe:hover .main-l {
+    transform: translateX(68.32%) translateZ(67px);
+}
+.signe:hover .main-r {
+    transform: translateX(-68.32%) translateZ(67px);
+}
+.img-fle {
+	border-radius: 100px;   
+    box-shadow: none;
+}
+	
+.ro {
+	perspective:500px;
+}	
+.img-roue {
+	border-radius: 100px;   
+    box-shadow: none;
+    cursor: pointer;
+    transition:transform 4s ease-in-out ;
+}
+.img-roue:hover {
+	transform: rotate(3510deg) translateZ(100px);
+    transition:transform 8s ease-in-out ;
+}
+
+.img-y {
+	border-radius: 200px;
+    cursor: pointer;
+    transition:transform 1s ease-in-out ;
+	margin-bottom: 75px ;
+	margin-top: 75px;
+}
+
+.img-y:hover{
+	transform: rotate(50deg);
+	transition: 3s;
+}
+.lien {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 20px; 
+}
+.lindu:hover {
+	transform: scale(1.05);
+}
+footer {
+	color: turquoise;
+	font-style: italic;
+	text-align: center;
+	margin-top: 50px; 
+	padding: 20px; 
+	font-size: 12px;
+	border-top: 1px solid #00d1b2;
+}

@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+
+body {
+    font-family: Brutalista, sans-serif;
+	background:#0062FF;
+    border: 20px solid #0A841A;        
+    outline: 10px solid #BCFD01;       
+    outline-offset: -30px;     
+    margin: 0; 
+    min-height: 100vh; 
+    padding: 40px; 
+    box-sizing: border-box; 
+    
+}
+
+h1, h2 {
+    font-family: Brutalista, sans-serif;
+	letter-spacing: 3px;  
+    line-height: 1.2;
+}
+
+
+nav { 
+    font-family: Alegreya;
+	letter-spacing: 3px;  
+    line-height: 1.2;
+}
+nav a {
+    text-decoration: none;
+    color: turquoise; 
+    font-size: 30px; 
+    font-weight: bold;
+	margin-bottom: 40px;
+}
+.album img{
+	height: 300px;
+    width: 335px;
+}	
+
+nav a:hover {
+	transform: scale(1.2);
+}
+
+.album img:hover{
+	transform: scale(1.02);
+}	
+
+
+	
+   img[src*="soundcloud"] { 
+    width: 100px;
+    height: 50px;
+
+}	
+	img[src*="d&p"] { 
+    width: 125px;
+    height: 116px;
+
+}	
+img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 
+        0 0 0 5px var(--c1);
+    margin-bottom: 20px; 
+    user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+hr {
+    border: 0;
+    height: 3px;
+    background: turquoise; 
+    margin: 20px 0;
+    width: 100%; 
+}
+.grille-albums {
+    display: flex;             
+    justify-content: center;   
+   align-items: flex-start;
+   gap: 20px;                 
+    align-items: flex-start;   
+}
+
+.album {
+    width: 30%;                  
+    padding: 10px;
+}
+
+
+.album img {
+    max-width: 100%;
+    height: auto;
+}
+summary span {
+    font-style: italic;
+}
+summary span {
+    font-weight: bold;
+}
+summary {
+    list-style: none;
+    cursor: pointer;
+}
+.album ol, .album ul {
+	font-family: Brutalista, sans-serif;
+}
+ .marque{--c1:green;}.marque ol,.marque ul{color:darkgreen;}
+.lacrize{--c1:#DCAB5E;}.lacrize ol,.lacrize ul{color:#DCAB5E;}
+.dmp{--c1:#888274;}.dmp ol,.dmp ul{color:white;}
+.lacriz{--c1:#4C837A;}.lacriz ol,.lacriz ul{color:#4C837A;}
+.jetrv{--c1:#1D4D65;}.jetrv ol,.jetrv ul{color:#1D4D65;}
+.jul{--c1:#2F3E5D;}.jul ol,.jul ul{color:#2F3E5D;}
+.rond{--c1:#A06D68;}.rond ol,.rond ul{color:#A06D68;}
+.my{--c1:#AD9763;}.my ol,.my ul{color:#AD9763;}
+.world{--c1:#598FB5;}.world ol,.world ul{color:#598FB5;}
+.vol1{--c1:#A7A7A7;}.vol1 ol,.vol1 ul{color:white;}
+.emo{--c1:#735B6F;}.emo ol,.emo ul{color:#735B6F;}
+.vol2{--c1:#368485;}.vol2 ol,.vol2 ul{color:#368485;}
+.ovni{--c1:#67DAD4;}.ovni ol,.ovni ul{color:#67DAD4;}
+.vol3{--c1:#0D243D;}.vol3 ol,.vol3 ul{color:#0D243D;}
+.nuq{--c1:pink;}.nuq ol,.nuq ul{color:pink;}
+.briller{--c1:#84ACA7;}.briller ol,.briller ul{color:#84ACA7;}
+.vol4{--c1:#F6EC00;}.vol4 ol,.vol4 ul{color:#F6EC00;}
+.nuage{--c1:#0F1D28;}.nuage ol,.nuage ul{color:#0F1D28;}
+.inspi{--c1:lightblue;}.inspi ol,.inspi ul{color:lightblue;}
+.zone{--c1:#1E3352;}.zone ol,.zone ul{color:#1E3352;}
+.vol5{--c1:firebrick;}.vol5 ol,.vol5 ul{color:firebrick;}
+.ri{--c1:purple;}.ri ol,.ri ul{color:purple;}
+.rien{--c1:purple;}.rien ol,.rien ul{color:purple;}
+.lol{--c1:#C04573;}.lol ol,.lol ul{color:orange;}
+.mach{--c1:darkblue;}.mach ol,.mach ul{color:darkblue;}
+.monde{--c1:#7C48B5;}.monde ol,.monde ul{color:purple;}
+.vol6{--c1:#AD1EA6;}.vol6 ol,.vol6 ul{color:#AD1EA6;}
+.demain{--c1:darkgreen;}.demain ol,.demain ul{color:darkgreen;}
+.indé{--c1:firebrick;}.indé ol,.indé ul{color:firebrick;}
+.terre{--c1:#0A0A26;}.terre ol,.terre ul{color:#0A0A26;}
+.extra{--c1:#151E58;}.extra ol,.extra ul{color:#151E58;}
+.blanc{--c1:white;}.blanc ol,.blanc ul{color:white;}
+.vol7{--c1:#320202;}.vol7 ol,.vol7 ul{color:#320202;}
+.quand{--c1:hotpink;}.quand ol,.quand ul{color:hotpink;}
+.route{--c1:#0A2658;}.route ol,.route ul{color:#0A2658;}
+.dec{--c1:#10ABCC;}.dec ol,.dec ul{color:#10ABCC;}
+.mise{--c1:peachpuff;}.mise ol,.mise ul{color:peachpuff;}
+.inna{--c1:#76526E;}.inna ol,.inna ul{color:#76526E;}
+.vie{--c1:darkorange;}.vie ol,.vie ul{color:darkorange;}
+.vol8{--c1:darkorange;}.vol8 ol,.vol8 ul{color:darkorange;}
+.tp{--c1:#453818;}.tp ol,.tp ul{color:#453818;}
+.oubliez{--c1:#CC9FA2}.oubliez ol,.oubliez ul {color:#CC9FA2}
+.orga{--c1:turquoise;}.orga ol,.orga ul{color:turquoise;}
+.cla{--c1:turquoise;}.cla ol,.cla ul{color:turquoise;}
+.organi{--c1:turquoise;}.organi ol,.organi ul{color:turquoise;}
+
+footer {
+	color: turquoise;
+	font-style: italic;
+	text-align: center;
+	margin-top: 50px; 
+	padding: 20px; 
+	font-size: 12px;
+	border-top: 1px solid #00d1b2;
+}

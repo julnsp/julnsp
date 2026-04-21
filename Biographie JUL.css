@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+
+body {
+    font-family: Brutalista, sans-serif;
+	background:#0062FF;
+    border: 20px solid #0062FF;        
+    outline: 10px solid #7E348B;       
+    outline-offset: -30px;     
+    margin: 0; 
+    
+    padding: 40px; 
+    box-sizing: border-box; 
+}
+
+summary {
+    list-style: none;
+    cursor: pointer;
+} 
+h1, h2 {
+    font-family: Brutalista, sans-serif;
+	
+	letter-spacing: 3px;  
+    line-height: 1.2;
+}
+nav { 
+    font-family: Alegreya;
+	
+	letter-spacing: 3px; 
+    line-height: 1.2;
+}
+nav a {
+    text-decoration: none;
+    color: turquoise; 
+    font-size: 30px; 
+    font-weight: bold;
+	margin-bottom: 40px;
+}
+nav a:hover {
+	transform: scale(1.2);
+}
+hr {
+    border: 0;
+    height: 3px;
+    background: turquoise; 
+    margin: 20px 0;
+    width: 100%; 
+}
+footer {
+	color: turquoise;
+	font-style: italic;
+	text-align: center;
+	margin-top: 50px; 
+	padding: 20px; 
+	font-size: 12px;
+	border-top: 1px solid #00d1b2;
+}
