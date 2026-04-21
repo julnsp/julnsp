@@ -21,8 +21,7 @@ h1, h2 {
 /* Uniquement pour les écrans de moins de 768px (téléphones et tablettes) */
 @media (max-width: 768px) {
     .signe {
-        gap: 40px; /* On réduit l'écart de départ sur mobile */
-        perspective: 500px;
+        gap: 40px; 
         padding: 20px;
     }
 
@@ -32,11 +31,11 @@ h1, h2 {
 
     /* On ajuste la translation pour que les mains se touchent sans déborder */
     .signe:hover .main-l, .signe:active .main-l {
-        transform: translateX(20px) translateZ(30px);
+        transform: translateX(20px) ;
     }
 
     .signe:hover .main-r, .signe:active .main-r {
-        transform: translateX(-20px) translateZ(30px);
+        transform: translateX(-20px) ;
     }
 }
 summary {
