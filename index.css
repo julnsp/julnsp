@@ -18,31 +18,7 @@ h1, h2 {
 	letter-spacing: 3px;  
     line-height: 1.2;
 }
-@media (max-width: 768px) {
-    .signe {
-        display: flex;
-        justify-content: center; /* Centre le signe sur l'écran */
-        align-items: center;
-        gap: 10px; /* Un tout petit écart au départ */
-        width: 100%;
-        overflow: hidden; /* Empêche le scroll horizontal si ça dépasse */
-    }
 
-    .signe img {
-        width: 100px; /* Taille réduite pour mobile */
-        height: auto;
-        transition: transform 0.4s ease; /* Pour que le mouvement soit fluide */
-    }
-
-    /* Quand on touche l'écran (hover ou active) */
-    .signe:hover .main-l, .signe:active .main-l {
-        transform: translateX(15px); /* Ajuste ce chiffre pour qu'elles se touchent */
-    }
-
-    .signe:hover .main-r, .signe:active .main-r {
-        transform: translateX(-15px);
-    }
-}
 summary {
     list-style: none;
     cursor: pointer;
