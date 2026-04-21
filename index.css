@@ -26,7 +26,7 @@ h1, h2 {
     }
 
     .signe img {
-        width: 140px; /* On réduit la taille des mains pour que ça tienne en largeur */
+        width: 145px; /* On réduit la taille des mains pour que ça tienne en largeur */
     }
 
     /* On ajuste la translation pour que les mains se touchent sans déborder */
