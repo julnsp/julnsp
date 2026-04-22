@@ -6,8 +6,7 @@
 body {
     font-family: Brutalista, sans-serif;
 	background:#0062FF;
-    border: 20px solid #0062FF;        
-    box-shadow: inset 0 0 0 10px #7E348B;         
+    border: 40px solid #7E348B;         
     margin: 0; 
     min-height: 100vh; 
     padding: 40px; 
@@ -68,8 +67,8 @@ li {
 }
 @media (max-width: 768px) {
     body {
-        border-width: 5px; 
-        box-shadow: inset 0 0 0 10px #0062FF; 
+        border-width: 10px; 
+        border: 10px solid #7E348B; 
         padding: 10px;
     }
 	.signe {
