@@ -12,7 +12,7 @@ body {
     padding: 40px; 
     box-sizing: border-box; 
 	width: 95%;           
-    max-width: 1000px;
+    max-width: auto ;
 }
 h1, h2 {
     font-family: Brutalista, sans-serif;
@@ -68,7 +68,7 @@ li {
 }
 @media (max-width: 768px) {
     .signe {
-        display: none; /* On cache l'animation sur téléphone */
+        display: none !important; 
     }
 
     .signe-statique {
@@ -81,6 +81,8 @@ li {
         max-width: 300px;
         height: auto;
         border-radius: 10px;
+		margin-bottom: 67px;
+	    margin-top: 67px;
     }
 }
 
