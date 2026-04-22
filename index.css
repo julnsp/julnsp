@@ -32,7 +32,8 @@ summary {
 }
 
 nav { 
-    display: flex;
+    font-family: Alegreya;
+	display: flex;
     flex-wrap: wrap; /* Les liens passent à la ligne sur mobile */
     justify-content: center;
     gap: 15px;
