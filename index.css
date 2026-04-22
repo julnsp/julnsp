@@ -1,12 +1,18 @@
 @charset "utf-8";
 
- * {
+ html, body {
+    max-width: 100vw; 
+    overflow-x: hidden; 
+    margin: 0;
+    padding: 0;
+}
+* {
 	 box-sizing: border-box; 
  }	 
 body {
     font-family: Brutalista, sans-serif;
 	background:#0062FF;
-    border: 40px solid #7E348B;         
+    border: 25px solid #7E348B;         
     margin: 0; 
     min-height: 100vh; 
     padding: 40px; 
@@ -15,9 +21,9 @@ body {
 }
 h1, h2 {
     font-family: Brutalista, sans-serif;
-	
-	letter-spacing: 1px;  
-    line-height: 1.2;
+	word-wrap: break-word;
+	max-width: 100%;
+	text-align: center;
 }
 
 summary {
@@ -26,17 +32,17 @@ summary {
 }
 
 nav { 
-    font-family: Alegreya;
-	
-	letter-spacing: 3px;  
-    line-height: 1.2;
+    display: flex;
+    flex-wrap: wrap; /* Les liens passent à la ligne sur mobile */
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
 }
 nav a {
     text-decoration: none;
-    color: turquoise; 
-    font-size: 30px; 
+    color: turquoise;
+    font-size: 22px;
     font-weight: bold;
-	margin-bottom: 40px;
 }
 nav a:hover {
 	transform: scale(1.2);
@@ -89,7 +95,16 @@ li {
 	    margin-top: 40px;
     }
 	nav a {
-        font-size: 20px; /* Menu plus petit pour pas qu'il se chevauche */
+        font-size: 16px; /* Menu plus petit pour pas qu'il se chevauche */
+    }
+	h1 {
+        font-size: 24px; /* Réduit le gros titre "Bienvenue..." */
+    }
+
+    /* On s'assure que l'image de JuL ne dépasse jamais */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
     }
 }
 
