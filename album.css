@@ -79,7 +79,7 @@ li {
 
     /* LIGNE : Remplace '.album' mobile */
     .album {
-        width: 51% !important; /* Force les 2 colonnes */
+        width: 49% !important; /* Force les 2 colonnes */
         display: block !important;
         margin-bottom: 25px !important;
     }
