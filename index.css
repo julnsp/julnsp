@@ -5,7 +5,7 @@ body {
     font-family: Brutalista, sans-serif;
 	background:#0062FF;
     border: 20px solid #0062FF;        
-    outline: 10px solid #7E348B;           
+    border: 10px solid #7E348B;         
     margin: 0; 
     min-height: 100vh; 
     padding: 40px; 
