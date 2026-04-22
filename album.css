@@ -70,25 +70,44 @@ li {
         height: auto !important;
     }
 	.grille-albums {
-        gap: 10px ; 
-        justify-content: space-around !important; 
+        display: flex !important;
+        flex-wrap: wrap !important;
+        flex-direction: row !important; /* Force l'alignement horizontal */
+        justify-content: space-between; /* Écarte les deux albums sur les bords */
+        gap: 10px;
+        padding: 0; 
     }
 
     .album {
-        width: 46% !important; 
-        min-width: 0 !important; 
-        padding: 5px;
-        margin-bottom: 20px;
+       width: 65% !important; /* On augmente encore un peu */
+        flex: 0 0 65% !important;
+        display: flex !important;
+        flex-direction: column !important; /* Titre en haut, Image au milieu, Liste en bas */
+        align-items: center !important;
+        margin-bottom: 25px;
     }
 
     .album img {
-        width: 100% !important;
-        border-radius: 10px; /* Des bords un peu plus fins pour les petites images */
+       width: 100% !important; /* Elle prend tout l'espace des 48% */
+        height: auto !important;
+        max-width: none !important; /* On enlève les limites */
+        order: 2; /* On la place en deuxième position (sous le titre) */
+        margin: 10px 0 !important;
     }
 
     /* On réduit l'écriture sous les albums pour que ce soit lisible */
-    .album summary, .album ol, .album ul {
-        font-size: 13px; 
+    .album summary {
+        order: 1; /* Le titre passe en premier */
+        font-size: 13px;
+        min-height: 50px; /* Espace réservé pour le texte */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+	}
+	.album details, .album ol, .album ul {
+        order: 3;
+        width: 100%;
+        font-size: 11px;
     }
 }
 
