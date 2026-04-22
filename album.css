@@ -70,13 +70,13 @@ li {
         height: auto !important;
     }
 	.grille-albums {
-        gap: 10px; /* On réduit un peu l'espace pour que ça passe à deux */
-        justify-content: space-around; /* Distribue l'espace proprement */
+        gap: 10px ; 
+        justify-content: space-around !important; 
     }
 
     .album {
-        width: 46%; /* Un peu moins de 50% pour laisser de la place au gap */
-        min-width: 0; /* On enlève le min-width pour forcer les deux colonnes */
+        width: 46% !important; 
+        min-width: 0 !important; 
         padding: 5px;
         margin-bottom: 20px;
     }
