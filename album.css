@@ -72,44 +72,46 @@ li {
 	.grille-albums {
         display: flex !important;
         flex-wrap: wrap !important;
-        flex-direction: row !important;
-        justify-content: space-between !important; /* Un à gauche, un à droite */
+        justify-content: center !important;
         gap: 10px !important;
-        padding: 0 !important; 
+        padding: 0 !important;
     }
 
+    /* LIGNE : Remplace '.album' mobile */
     .album {
-      .album {
-        width: 55% !important; /* Environ la moitié */
-        flex: 0 0 55% !important;
+        width: 46% !important; /* Force les 2 colonnes */
+        display: block !important;
+        margin-bottom: 25px !important;
+    }
+
+    /* LIGNE : Ajoute ce bloc pour casser l'alignement horizontal du summary */
+    .album > summary {
         display: flex !important;
-        flex-direction: column !important; /* Titre en haut, Image en bas */
+        flex-direction: column !important; /* Aligne le texte puis l'image en dessous */
         align-items: center !important;
-        margin-bottom: 35px !important;
+        list-style: none !important;
     }
 
+    /* LIGNE : La règle magique pour tes images minuscules */
     .album img {
-      display: block !important;
-        width: 100% !important; /* Elle prend toute la largeur des 47% */
+        width: 100% !important; /* L'image prend toute la largeur des 46% */
+        max-width: 160px !important; /* Taille augmentée par rapport à tes screens */
         height: auto !important;
-        max-width: 180px !important; /* On lui donne une taille max généreuse */
-        margin: 10px auto 0 auto !important; /* Elle se décolle du titre */
-        order: 2;
+        display: block !important;
+        margin: 10px auto !important;
     }
 
-    /* On réduit l'écriture sous les albums pour que ce soit lisible */
-    .album summary {
-       width: 100% !important;
-        font-size: 13px !important;
+    /* LIGNE : Ajuste le texte pour qu'il ne pousse pas l'image */
+    .album p, .album span {
+        font-size: 11px !important; /* Plus petit pour laisser de la place à l'image */
         text-align: center !important;
-        order: 1; /* Le titre passe en premier */
-        min-height: 45px;
-	}
-	.album ol, .album ul {
-        order: 3;
-        font-size: 11px !important;
-        padding-left: 15px !important;
-        text-align: left;
+        width: 100% !important;
+        margin: 2px 0 !important;
+    }
+
+    /* LIGNE : Cache la petite flèche 'details' qui décale tout à gauche */
+    summary::-webkit-details-marker {
+        display: none !important;
     }
 }
 
