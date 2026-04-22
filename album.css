@@ -79,7 +79,7 @@ li {
 
     /* LIGNE : Remplace '.album' mobile */
     .album {
-        width: 50% !important; /* Force les 2 colonnes */
+        width: 53% !important; /* Force les 2 colonnes */
         display: block !important;
         margin-bottom: 25px !important;
     }
@@ -90,6 +90,8 @@ li {
         flex-direction: column !important; /* Aligne le texte puis l'image en dessous */
         align-items: center !important;
         list-style: none !important;
+		margin-bottom: 25px !important;
+		margin-top: 25px !important;
     }
 
     /* LIGNE : La règle magique pour tes images minuscules */
@@ -103,7 +105,7 @@ li {
 
     /* LIGNE : Ajuste le texte pour qu'il ne pousse pas l'image */
     .album p, .album span {
-        font-size: 13px !important; /* Plus petit pour laisser de la place à l'image */
+        font-size: 11px !important; /* Plus petit pour laisser de la place à l'image */
         text-align: center !important;
         width: 100% !important;
         margin: 2px 0 !important;
@@ -178,10 +180,10 @@ summary {
 .album ol, .album ul {
 	font-family: Brutalista, sans-serif;
 }
- .marque{--c1:green;}.marque ol,.marque ul{color:darkgreen;}
+ .marque{--c1:green;}.marque ol,.marque ul{color:green;}
 .lacrize{--c1:#DCAB5E;}.lacrize ol,.lacrize ul{color:#DCAB5E;}
 .dmp{--c1:#888274;}.dmp ol,.dmp ul{color:white;}
-.lacriz{--c1:#4C837A;}.lacriz ol,.lacriz ul{color:#4C837A;}
+.lacriz{--c1:#83531F;}.lacriz ol,.lacriz ul{color:#83531F;}
 .jetrv{--c1:#1D4D65;}.jetrv ol,.jetrv ul{color:#1D4D65;}
 .jul{--c1:#2F3E5D;}.jul ol,.jul ul{color:#2F3E5D;}
 .rond{--c1:#A06D68;}.rond ol,.rond ul{color:#A06D68;}
