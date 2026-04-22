@@ -1,43 +1,88 @@
 @charset "utf-8";
 
 
+ html, body {
+    max-width: 100vw; 
+    overflow-x: hidden; 
+    margin: 0;
+    padding: 0;
+}
+* {
+	 box-sizing: border-box; 
+ }	 
 body {
     font-family: Brutalista, sans-serif;
 	background:#0062FF;
-    border: 20px solid #0062FF;        
-    outline: 10px solid #7E348B;       
-    outline-offset: -30px;     
+    border: 25px solid #7E348B;         
     margin: 0; 
-    
+    min-height: 100vh; 
     padding: 40px; 
-    box-sizing: border-box; 
+   
+	
+}
+h1, h2 {
+    font-family: Brutalista, sans-serif;
+	word-wrap: break-word;
+	max-width: 100%;
+	text-align: center;
 }
 
 summary {
     list-style: none;
     cursor: pointer;
-} 
-h1, h2 {
-    font-family: Brutalista, sans-serif;
-	
-	letter-spacing: 3px;  
-    line-height: 1.2;
 }
+
 nav { 
     font-family: Alegreya;
-	
-	letter-spacing: 3px; 
-    line-height: 1.2;
+	display: flex;
+    flex-wrap: wrap; /* Les liens passent à la ligne sur mobile */
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
 }
 nav a {
     text-decoration: none;
-    color: turquoise; 
-    font-size: 30px; 
+    color: turquoise;
+    font-size: 22px;
     font-weight: bold;
-	margin-bottom: 40px;
 }
 nav a:hover {
 	transform: scale(1.2);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 
+        0 0 0 5px #7E348B,
+        0 0 0 10px #014EA6;
+    margin-bottom: 20px; 
+    user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+}
+li {
+	margin: 15px;
+}
+@media (max-width: 768px) {
+    body {
+        border-width: 10px; 
+        border: 10px solid #7E348B; 
+        padding: 10px;
+	}
+	nav a {
+        font-size: 16px; /* Menu plus petit pour pas qu'il se chevauche */
+    }
+	h1 {
+        font-size: 24px; /* Réduit le gros titre "Bienvenue..." */
+    }
+
+    /* On s'assure que l'image de JuL ne dépasse jamais */
+    video {
+        max-width: 100% !important;
+        height: auto !important;
+    }
 }
 hr {
     border: 0;
