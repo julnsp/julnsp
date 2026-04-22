@@ -72,42 +72,44 @@ li {
 	.grille-albums {
         display: flex !important;
         flex-wrap: wrap !important;
-        flex-direction: row !important; /* Force l'alignement horizontal */
-        justify-content: space-between; /* Écarte les deux albums sur les bords */
-        gap: 10px;
-        padding: 0; 
+        flex-direction: row !important;
+        justify-content: space-between !important; /* Un à gauche, un à droite */
+        gap: 10px !important;
+        padding: 0 !important; 
     }
 
     .album {
-       width: 55% !important; /* On augmente encore un peu */
-        flex: 0 0 65% !important;
+      .album {
+        width: 55% !important; /* Environ la moitié */
+        flex: 0 0 55% !important;
         display: flex !important;
-        flex-direction: column !important; /* Titre en haut, Image au milieu, Liste en bas */
+        flex-direction: column !important; /* Titre en haut, Image en bas */
         align-items: center !important;
-        margin-bottom: 25px;
+        margin-bottom: 35px !important;
     }
 
     .album img {
-       width: 100% !important; /* Elle prend tout l'espace des 48% */
+      display: block !important;
+        width: 100% !important; /* Elle prend toute la largeur des 47% */
         height: auto !important;
-        max-width: none !important; /* On enlève les limites */
-        order: 2; /* On la place en deuxième position (sous le titre) */
-        margin: 10px 0 !important;
+        max-width: 180px !important; /* On lui donne une taille max généreuse */
+        margin: 10px auto 0 auto !important; /* Elle se décolle du titre */
+        order: 2;
     }
 
     /* On réduit l'écriture sous les albums pour que ce soit lisible */
     .album summary {
+       width: 100% !important;
+        font-size: 13px !important;
+        text-align: center !important;
         order: 1; /* Le titre passe en premier */
-        font-size: 13px;
-        min-height: 50px; /* Espace réservé pour le texte */
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        min-height: 45px;
 	}
-	.album details, .album ol, .album ul {
+	.album ol, .album ul {
         order: 3;
-        width: 100%;
-        font-size: 11px;
+        font-size: 11px !important;
+        padding-left: 15px !important;
+        text-align: left;
     }
 }
 
