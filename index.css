@@ -60,6 +60,28 @@ img {
 li {
 	margin: 15px;
 }
+
+.signe-statique {
+    display: none; 
+}
+@media (max-width: 768px) {
+    .signe-animation {
+        display: none; /* On cache l'animation sur téléphone */
+    }
+
+    .signe-statique {
+        display: block; /* On montre la photo fixe */
+        text-align: center;
+    }
+
+    .signe-statique img {
+        width: 80%; /* Pour qu'elle s'adapte à la largeur du téléphone */
+        max-width: 300px;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+
 .signe {
     display: flex;
     cursor: pointer;
