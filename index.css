@@ -132,10 +132,10 @@ li {
 }
 
 .signe:hover .main-l {
-    transform: translateX(68.32%) translateZ(67px);
+    transform: translateX(67%) translateZ(67px);
 }
 .signe:hover .main-r {
-    transform: translateX(-68.32%) translateZ(67px);
+    transform: translateX(-67%) translateZ(67px);
 }
 .img-fle {
 	border-radius: 100px;   
