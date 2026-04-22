@@ -11,8 +11,7 @@ body {
     min-height: 100vh; 
     padding: 40px; 
     box-sizing: border-box; 
-	width: 95%;           
-    max-width: auto ;
+	
 }
 h1, h2 {
     font-family: Brutalista, sans-serif;
@@ -66,7 +65,7 @@ li {
 .signe-statique {
     display: none; 
 }
-@media (max-width: 768px) {
+@media  {
     .signe {
         display: none !important; 
     }
