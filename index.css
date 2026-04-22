@@ -11,6 +11,8 @@ body {
     min-height: 100vh; 
     padding: 40px; 
     box-sizing: border-box; 
+	width: 95%;           
+    max-width: 1000px;
 }
 h1, h2 {
     font-family: Brutalista, sans-serif;
@@ -65,7 +67,7 @@ li {
     display: none; 
 }
 @media (max-width: 768px) {
-    .signe-animation {
+    .signe {
         display: none; /* On cache l'animation sur téléphone */
     }
 
