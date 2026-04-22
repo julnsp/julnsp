@@ -79,7 +79,7 @@ li {
 
     /* LIGNE : Remplace '.album' mobile */
     .album {
-        width: 47% !important; /* Force les 2 colonnes */
+        width: 50% !important; /* Force les 2 colonnes */
         display: block !important;
         margin-bottom: 25px !important;
     }
@@ -103,7 +103,7 @@ li {
 
     /* LIGNE : Ajuste le texte pour qu'il ne pousse pas l'image */
     .album p, .album span {
-        font-size: 17px !important; /* Plus petit pour laisser de la place à l'image */
+        font-size: 13px !important; /* Plus petit pour laisser de la place à l'image */
         text-align: center !important;
         width: 100% !important;
         margin: 2px 0 !important;
