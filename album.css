@@ -69,6 +69,27 @@ li {
         max-width: 100% !important;
         height: auto !important;
     }
+	.grille-albums {
+        gap: 10px; /* On réduit un peu l'espace pour que ça passe à deux */
+        justify-content: space-around; /* Distribue l'espace proprement */
+    }
+
+    .album {
+        width: 46%; /* Un peu moins de 50% pour laisser de la place au gap */
+        min-width: 0; /* On enlève le min-width pour forcer les deux colonnes */
+        padding: 5px;
+        margin-bottom: 20px;
+    }
+
+    .album img {
+        width: 100% !important;
+        border-radius: 10px; /* Des bords un peu plus fins pour les petites images */
+    }
+
+    /* On réduit l'écriture sous les albums pour que ce soit lisible */
+    .album summary, .album ol, .album ul {
+        font-size: 13px; 
+    }
 }
 
 .album img:hover{
