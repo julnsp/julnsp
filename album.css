@@ -173,7 +173,7 @@ hr {
 }
 
 .album img {
-    width: 250px; /* Taille fixe ou auto pour le PC */
+    width: 335px; /* Taille fixe ou auto pour le PC */
     height: auto;
 }
 summary span {
