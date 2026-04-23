@@ -79,7 +79,7 @@ li {
 
     /* LIGNE : Remplace '.album' mobile */
     .album {
-        width: 48% !important; /* Force les 2 colonnes */
+        width: 46% !important; /* Force les 2 colonnes */
         display: block !important;
         margin-bottom: 25px !important;
     }
@@ -158,23 +158,22 @@ hr {
 }
 .grille-albums {
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; /* Centre les albums s'ils sont moins de 3 */
-    gap: 30px;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .album {
- width: 32%; /* 3 albums par ligne sur PC */
-    min-width: 280px; 
+    /* 30% permet d'en caser 3 pile (30% x 3 = 90% + les espaces) */
+    width: 30% !important; 
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 40px;
 }
 
-
 .album img {
-    max-width: 100%;
+    width: 250px; /* Taille fixe ou auto pour le PC */
     height: auto;
 }
 summary span {
