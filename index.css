@@ -109,38 +109,27 @@ li {
     }
 }
 
+.signe:hover .main-l {
+    transform: translateX(68.32%) translateZ(67px);
+}
+.signe:hover .main-r {
+    transform: translateX(-68.32%) translateZ(67px);
+}
 .signe {
     display: flex;
-    justify-content: center; /* Les mains partent du centre */
-    align-items: center;
     cursor: pointer;
     padding: 50px;
-    perspective: 500px; /* Augmenté pour un meilleur effet de profondeur */
-    margin: 67px auto;
-    width: 100%;
-    overflow: visible;
+    overflow: hidden;
+    perspective: 200px;
 }
 
 .signe img {
     width: 229px; 
     height: auto;
-    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Effet fluide avec petit rebond */
+    transition:transform 0.5s ease-in-out ; 
     box-shadow: none;
 }
 
-/* --- L'ANIMATION AU SURVOL --- */
-
-.signe:hover .main-l {
-    /* translateX : on les rapproche (ajuste le 114px si elles se chevauchent trop) */
-    /* scale(1.2) : elles grossissent de 20% */
-    /* translateZ : elles s'avancent vers l'utilisateur */
-    transform: translateX(110px) translateZ(80px) scale(1.2) rotateY(10deg);
-}
-
-.signe:hover .main-r {
-    /* Pareil en négatif pour la main droite */
-    transform: translateX(-110px) translateZ(80px) scale(1.2) rotateY(-10deg);
-}
 .img-fle {
 	border-radius: 100px;   
     box-shadow: none;
