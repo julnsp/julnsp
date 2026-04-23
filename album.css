@@ -157,16 +157,19 @@ hr {
     width: 100%; 
 }
 .grille-albums {
-    display: flex;             
-    justify-content: center;   
-   align-items: flex-start;
-   gap: 20px;                 
-    align-items: flex-start;   
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; /* Centre les albums s'ils sont moins de 3 */
+    gap: 30px;
+    margin-bottom: 50px;
 }
 
 .album {
-    width: 30%;                  
-    padding: 10px;
+ width: 32%; /* 3 albums par ligne sur PC */
+    min-width: 280px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
