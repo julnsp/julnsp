@@ -165,11 +165,15 @@ li {
 	transform: rotate(50deg);
 	transition: 3s;
 }
-.lien {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 15px 20px; 
+/* Remplace le sélecteur du conteneur de tes liens par celui-ci */
+.liens-conteneur {
+  display: flex;
+  flex-wrap: wrap;            /* Permet le retour à la ligne */
+  justify-content: center;   /* Centre les icônes */
+  align-items: center;
+  gap: 15px;                  /* Espace régulier entre chaque élément */
+  max-width: 320px;           /* Force le passage sur 2-3 lignes sur écran étroit */
+  margin: 0 auto;             /* Centre le bloc complet */
 }
 .lindu:hover {
 	transform: scale(1.05);
