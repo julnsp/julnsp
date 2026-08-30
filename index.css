@@ -108,6 +108,15 @@ li {
         max-width: 100% !important;
         height: auto !important;
     }
+	.lien {
+  display: flex;
+  flex-wrap: wrap;            /* Permet le retour à la ligne */
+  justify-content: center;   /* Centre les icônes */
+  align-items: center;
+  gap: 15px;                  /* Espace régulier entre chaque élément */
+  max-width: 320px;           /* Force le passage sur 2-3 lignes sur écran étroit */
+  margin: 0 auto;             /* Centre le bloc complet */
+}
 }
 
 .signe:hover .main-l {
@@ -167,13 +176,10 @@ li {
 }
 /* Remplace le sélecteur du conteneur de tes liens par celui-ci */
 .lien {
-  display: flex;
-  flex-wrap: wrap;            /* Permet le retour à la ligne */
-  justify-content: center;   /* Centre les icônes */
-  align-items: center;
-  gap: 15px;                  /* Espace régulier entre chaque élément */
-  max-width: 320px;           /* Force le passage sur 2-3 lignes sur écran étroit */
-  margin: 0 auto;             /* Centre le bloc complet */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 20px; 
 }
 .lindu:hover {
 	transform: scale(1.05);
