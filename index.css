@@ -166,7 +166,7 @@ li {
 	transition: 3s;
 }
 /* Remplace le sélecteur du conteneur de tes liens par celui-ci */
-.liens-conteneur {
+.lien {
   display: flex;
   flex-wrap: wrap;            /* Permet le retour à la ligne */
   justify-content: center;   /* Centre les icônes */
