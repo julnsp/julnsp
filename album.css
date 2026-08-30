@@ -51,76 +51,67 @@ li {
 	margin: 15px;
 }
 
+/* --- 4. OPTIMISATION MOBILE (ÉCRANS < 768px) --- */
 @media (max-width: 768px) {
     body {
-        border-width: 10px; 
-        border: 10px solid #0A841A; 
-        padding: 10px;
-    }
-	nav a {
-        font-size: 16px; /* Menu plus petit pour pas qu'il se chevauche */
-    }
-	h1 {
-        font-size: 24px; /* Réduit le gros titre "Bienvenue..." */
+        border: 8px solid #7E348B; 
+        padding: 8px;
     }
 
-    /* On s'assure que l'image de JuL ne dépasse jamais */
-    img {
-        max-width: 100% !important;
-        height: auto !important;
-    }
-	.grille-albums {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 10px !important;
-        padding: 0 !important;
+    nav {
+        gap: 8px;
     }
 
-    /* LIGNE : Remplace '.album' mobile */
+    nav a {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .grille-albums {
+        gap: 8px; /* Espacement réduit pour gagner de la place */
+    }
+
+    /* Configuration à 2 colonnes par ligne */
     .album {
-        width: 46% !important; /* Force les 2 colonnes */
-        display: block !important;
-        margin-bottom: 25px !important;
+        width: calc(50% - 4px); /* 2 colonnes côte à côte */
+        min-width: 0; /* Permet la réduction sur petits écrans */
+        margin-bottom: 10px;
+        padding: 8px;
     }
 
-    /* LIGNE : Ajoute ce bloc pour casser l'alignement horizontal du summary */
-    .album > summary {
-        display: flex !important;
-        flex-direction: column !important; /* Aligne le texte puis l'image en dessous */
-        align-items: center !important;
-        list-style: none !important;
-		margin-bottom: 25px !important;
-		margin-top: 25px !important;
+    /* Pochette d'album */
+    .album > summary img,
+    .album ol img {
+        width: 100%;
+        max-width: 100%; /* Prend toute la largeur de la colonne */
+        height: auto;
     }
 
-    /* LIGNE : La règle magique pour tes images minuscules */
-    .album img {
-        width: 100% !important; /* L'image prend toute la largeur des 46% */
-        max-width: 160px !important; /* Taille augmentée par rapport à tes screens */
-        height: auto !important;
-        display: block !important;
-        margin: 10px auto !important;
+    /* Icônes écoute/achat */
+    img[src*="soundcloud"], 
+    img[src*="spotify"], 
+    img[src*="d&p"] {
+        height: 30px !important;
+        max-width: 90px !important;
+        margin: 5px auto !important;
     }
 
-    /* LIGNE : Ajuste le texte pour qu'il ne pousse pas l'image */
-    .album p, .album span {
-        font-size: 11px !important; /* Plus petit pour laisser de la place à l'image */
-        text-align: center !important;
-        width: 100% !important;
-        margin: 2px 0 !important;
+    /* Adaptations des textes et listes */
+    .album ol, .album ul {
+        padding-left: 12px;
+        font-size: 11px;
     }
-	.album > summary > p:first-of-type {
-    margin-bottom: 10px !important; /* Ajuste ce chiffre pour plus ou moins d'espace */
-}
-	.album p {
-    margin: 5px 0 !important;
-    text-align: center !important;
-    width: 100% !important;
-}
-    /* LIGNE : Cache la petite flèche 'details' qui décale tout à gauche */
-    summary::-webkit-details-marker {
-        display: none !important;
+
+    .album summary p, 
+    .album summary span {
+        font-size: 12px;
     }
 }
 
