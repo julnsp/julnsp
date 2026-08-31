@@ -52,89 +52,85 @@ li {
 }
 
 /* --- 4. OPTIMISATION MOBILE (ÉCRANS < 768px) --- */
-/* --- 4. OPTIMISATION MOBILE (ÉCRANS < 768px) --- */
-/* --- 4. OPTIMISATION MOBILE (ÉCRANS < 768px) --- */
 @media (max-width: 768px) {
     body {
         border: 8px solid #7E348B; 
-        padding: 10px 4px; /* Un padding latéral réduit donne plus de place aux images */
+        padding: 8px 4px;
     }
 
     nav {
         gap: 8px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     nav a {
         font-size: 16px;
     }
 
-    h1 {
-        font-size: 20px;
-    }
-
-    h2 {
-        font-size: 16px;
-    }
-
-    /* Grille 2 colonnes parfaite et centrée */
+    /* Force la grille 2 colonnes sans écrasement */
     .grille-albums {
         display: grid !important;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px 8px; /* Espacement optimal entre colonnes et lignes */
-        width: 100%;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 15px 10px !important;
+        width: 100% !important;
     }
 
-    /* Centrage et structure de chaque bloc album */
+    /* Le bloc de chaque album */
     .album {
         width: 100% !important;
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Centre horizontalement l'image et le texte */
-        text-align: center;   /* Centre le texte sur plusieurs lignes */
-        margin-bottom: 15px;
+        max-width: 100% !important;
+        margin-bottom: 0 !important;
+        padding: 0 !important;
     }
 
-    /* Pochette agrandie au maximum de sa colonne */
-    .album > summary img,
-    .album ol img,
-    .album img {
+    /* Force l'empilement vertical : Texte au-dessus, Image en dessous */
+    .album summary {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
         width: 100% !important;
-        max-width: 170px !important; /* Taille maximale boostée pour mobile */
-        height: auto !important;
-        margin: 8px auto !important;
+        text-align: center !important;
     }
 
-    /* Icônes écoute/achat agrandies et centrées */
+    /* Corrige la taille des pochettes d'album */
+    .album img,
+    .album > summary img,
+    .album ol img {
+        width: 100% !important;
+        max-width: 160px !important; /* Augmentation nette de la taille */
+        height: auto !important;
+        min-width: 110px !important; /* Empêche l'image de rétrécir */
+        margin: 8px auto 0 auto !important;
+        display: block !important;
+    }
+
+    /* Textes du summary */
+    .album summary p, 
+    .album summary span,
+    .album summary div {
+        font-size: 13px !important;
+        line-height: 1.2 !important;
+        margin: 2px 0 !important;
+        text-align: center !important;
+        display: block !important;
+    }
+
+    /* Icônes écoute/achat */
     img[src*="soundcloud"], 
     img[src*="spotify"], 
     img[src*="d&p"] {
         height: auto !important;
-        max-width: 85px !important;
-        margin: 6px auto !important;
+        max-width: 90px !important;
+        margin: 8px auto !important;
     }
 
-    /* Textes et balises summary parfaitement centrés */
-    .album summary {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .album summary p, 
-    .album summary span {
-        font-size: 13px;
-        line-height: 1.2;
-        margin: 2px 0;
-        text-align: center;
-    }
-
+    /* Alignement des listes de pistes quand l'album est ouvert */
     .album ol, .album ul {
-        padding-left: 0;
-        list-style-position: inside;
-        font-size: 12px;
-        text-align: center;
+        padding-left: 0 !important;
+        list-style-position: inside !important;
+        font-size: 11px !important;
+        text-align: center !important;
     }
 }
 
