@@ -52,66 +52,74 @@ li {
 }
 
 /* --- 4. OPTIMISATION MOBILE (ÉCRANS < 768px) --- */
+/* --- 4. OPTIMISATION MOBILE (ÉCRANS < 768px) --- */
 @media (max-width: 768px) {
     body {
         border: 8px solid #7E348B; 
-        padding: 8px;
+        padding: 12px;
     }
 
     nav {
-        gap: 8px;
+        gap: 10px;
     }
 
     nav a {
-        font-size: 14px;
-    }
-
-    h1 {
         font-size: 18px;
     }
 
+    h1 {
+        font-size: 22px;
+    }
+
     h2 {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .grille-albums {
-        gap: 8px; /* Espacement réduit pour gagner de la place */
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
     }
 
-    /* Configuration à 2 colonnes par ligne */
+    /* Passage en 1 colonne centrée pour une meilleure lisibilité */
     .album {
-        width: calc(50% - 4px); /* 2 colonnes côte à côte */
-        min-width: 0; /* Permet la réduction sur petits écrans */
-        margin-bottom: 10px;
-        padding: 8px;
+        width: 100% !important;
+        max-width: 320px;
+        margin-bottom: 0;
+        padding: 0;
+        text-align: center;
     }
 
-    /* Pochette d'album */
+    /* Taille de la pochette d'album réaugmentée */
     .album > summary img,
     .album ol img {
-        width: 100%;
-        max-width: 100%; /* Prend toute la largeur de la colonne */
+        width: 100% !important;
+        max-width: 280px !important;
         height: auto;
     }
 
-    /* Icônes écoute/achat */
+    /* Agrrandissement et centrage des icônes écoute/achat */
     img[src*="soundcloud"], 
     img[src*="spotify"], 
     img[src*="d&p"] {
-        height: 30px !important;
-        max-width: 90px !important;
-        margin: 5px auto !important;
+        height: auto !important;
+        max-width: 120px !important;
+        margin: 10px auto !important;
     }
 
     /* Adaptations des textes et listes */
     .album ol, .album ul {
-        padding-left: 12px;
-        font-size: 11px;
+        padding-left: 0;
+        list-style-position: inside;
+        font-size: 14px;
+        text-align: center;
     }
 
     .album summary p, 
     .album summary span {
-        font-size: 12px;
+        font-size: 15px;
+        display: block;
+        text-align: center;
     }
 }
 
