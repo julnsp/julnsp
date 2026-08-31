@@ -55,65 +55,71 @@ li {
 @media (max-width: 768px) {
     body {
         border: 8px solid #7E348B; 
-        padding: 8px 4px;
+        padding: 15px 10px !important; /* Ajoute de l'espace par rapport à la bordure violette */
     }
 
     nav {
         gap: 8px;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
 
     nav a {
         font-size: 16px;
     }
 
-    /* Force la grille 2 colonnes sans écrasement */
+    /* Grille 2 colonnes bien espacée des bords */
     .grille-albums {
         display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        gap: 15px 10px !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px 15px !important;
         width: 100% !important;
+        padding: 0 10px !important; /* Décolle la grille des bords gauche/droite */
+        box-sizing: border-box !important;
     }
 
-    /* Le bloc de chaque album */
+    /* Conteneur de chaque album */
     .album {
         width: 100% !important;
         max-width: 100% !important;
-        margin-bottom: 0 !important;
-        padding: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* Centre tout le contenu de l'album */
+        justify-content: flex-start !important;
+        text-align: center !important;
+        margin: 0 auto !important;
     }
 
-    /* Force l'empilement vertical : Texte au-dessus, Image en dessous */
+    /* Force le centrage du bloc summary (texte + pochette) */
     .album summary {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        justify-content: flex-start !important;
+        justify-content: center !important;
         width: 100% !important;
         text-align: center !important;
+        margin: 0 auto !important;
     }
 
-    /* Corrige la taille des pochettes d'album */
+    /* Alignement et taille des pochettes */
     .album img,
     .album > summary img,
     .album ol img {
         width: 100% !important;
-        max-width: 160px !important; /* Augmentation nette de la taille */
+        max-width: 140px !important; /* Dimension idéale pour tenir sans coller */
         height: auto !important;
-        min-width: 110px !important; /* Empêche l'image de rétrécir */
-        margin: 8px auto 0 auto !important;
+        margin: 8px auto !important;
         display: block !important;
     }
 
-    /* Textes du summary */
+    /* Textes parfaitement centrés */
     .album summary p, 
     .album summary span,
     .album summary div {
-        font-size: 13px !important;
-        line-height: 1.2 !important;
+        font-size: 12px !important;
+        line-height: 1.3 !important;
         margin: 2px 0 !important;
         text-align: center !important;
-        display: block !important;
+        width: 100% !important;
     }
 
     /* Icônes écoute/achat */
@@ -121,16 +127,17 @@ li {
     img[src*="spotify"], 
     img[src*="d&p"] {
         height: auto !important;
-        max-width: 90px !important;
+        max-width: 80px !important;
         margin: 8px auto !important;
     }
 
-    /* Alignement des listes de pistes quand l'album est ouvert */
+    /* Alignement des pistes ouvertes */
     .album ol, .album ul {
         padding-left: 0 !important;
         list-style-position: inside !important;
         font-size: 11px !important;
         text-align: center !important;
+        width: 100% !important;
     }
 }
 
