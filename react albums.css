@@ -12,8 +12,7 @@
  }	 
 body {
     font-family: Brutalista, sans-serif;
-	background:#0062FF;
-    border: 25px solid #7E348B;         
+	background:black ;       
     margin: 0; 
     min-height: 100vh; 
     padding: 40px; 
@@ -87,4 +86,13 @@ marquee:hover {
 	background-size: 100% 100%; 
 	background-repeat: no-repeat;
 	animation: tv-glitch 0.2s infinite steps(2);
+}
+footer {
+	color: gold;
+	font-style: italic;
+	text-align: center;
+	margin-top: 50px; 
+	padding: 20px; 
+	font-size: 12px;
+	border-top: 1px solid gold;
 }
