@@ -87,6 +87,13 @@ marquee:hover {
 	background-repeat: no-repeat;
 	animation: tv-glitch 0.2s infinite steps(2);
 }
+.video-container {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center;     /* Centre verticalement si le conteneur a une hauteur */
+  width: 100%;
+  margin: 20px 0;          /* Ajoute un peu d'espace au-dessus et en dessous */
+}
 footer {
 	color: gold;
 	font-style: italic;
