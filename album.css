@@ -1,188 +1,55 @@
 @charset "utf-8";
 
+/* --- 1. RAZ & BASE --- */
+* {
+    box-sizing: border-box; 
+}
 
- html, body {
+html, body {
     max-width: 100vw; 
     overflow-x: hidden; 
     margin: 0;
     padding: 0;
 }
-* {
-	 box-sizing: border-box; 
- }	 
+
 body {
     font-family: Brutalista, sans-serif;
-	background: black;         
+    background: black;          
     margin: 0; 
     min-height: 100vh; 
     padding: 40px; 
 }
+
 h1, h2 {
     font-family: Brutalista, sans-serif;
-	word-wrap: break-word;
-	max-width: 100%;
-	text-align: center;
-	color:gold;
+    word-wrap: break-word;
+    max-width: 100%;
+    text-align: center;
+    color: gold;
 }
+
 p {
-	color:gold;
+    color: gold;
 }
+
 summary {
     list-style: none;
     cursor: pointer;
 }
 
-nav { 
-  font-family: 'Alegreya', serif;
-  display: flex;
-  flex-wrap: wrap; /* Les liens passent à la ligne sur mobile */
-  justify-content: space-between; /* Ou center selon ton besoin */
-  align-items: center;
-  padding: 15px 20px;
-  margin-bottom: 30px;
+summary::-webkit-details-marker {
+    display: none;
 }
 
-nav a {
-  text-decoration: none;
-  color: gold;
-  font-size: 28px;
-  font-weight: bold;
+summary span {
+    font-style: italic;
+    font-weight: bold;
 }
-nav a:hover {
-	transform: scale(1.2);
-}
-@keyframes tv-glitch {
-	0% {
-		background-position: 50% 50%;
-		filter: hue-rotate(0deg);
-	}
-	20% {
-		background-position: 48% 52%;
-		filter: hue-rotate(90deg) contrast(150%);
-	}
-	40% {
-		background-position: 52% 48%;
-		filter: hue-rotate(0deg);
-	}
-	60% {
-		background-position: 49% 51%;
-		filter: invert(20%);
-	}
-	80% {
-		background-position: 51% 49%;
-		filter: hue-rotate(-90deg);
-	}
-	100% {
-		background-position: 50% 50%;
-		filter: hue-rotate(0deg);
-	}
-}
-marquee {
-	font-size: 45px;
-	padding: 30px;
-	color:gold;
-}
-marquee:hover {
-	background-image: url('file:///D:/jul/provisoire/bug televiseur.jpg');
-	background-size: 100% 100%; 
-	background-repeat: no-repeat;
-	animation: tv-glitch 0.2s infinite steps(2);
-}
+
 li {
-	margin: 15px;
+    margin: 15px;
 }
 
-/* --- 4. OPTIMISATION MOBILE (ÉCRANS < 768px) --- */
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-
-    nav {
-        gap: 12px;
-        justify-content: center;
-    }
-
-    nav a {
-        font-size: 16px;
-    }
-
-    h1 { font-size: 20px; }
-    h2 { font-size: 18px; }
-
-    /* Layout responsive en 1 seule colonne pour aérer */
-    .grille-albums {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .album {
-        width: 100%; /* L'album prend toute la largeur */
-        box-sizing: border-box;
-        margin-bottom: 15px;
-        padding: 15px;
-        text-align: center; /* Centre le texte et les images */
-    }
-
-    /* Pochette d'album agrandie et centrée */
-    .album > summary img,
-    .album ol img {
-        width: 140px; /* Taille fixe bien visible */
-        height: 140px;
-        object-fit: cover;
-        margin: 10px auto;
-        display: block;
-    }
-
-    /* Textes et listes plus lisibles */
-    .album summary p, 
-    .album summary span {
-        font-size: 15px;
-        line-height: 1.4;
-    }
-
-    .album ol, .album ul {
-        padding-left: 0;
-        font-size: 14px;
-        list-style-position: inside;
-    }
-
-    /* Icônes écoute/achat */
-    img[src*="soundcloud"], 
-    img[src*="spotify"], 
-    img[src*="d&p"] {
-        height: 35px !important;
-        max-width: 110px !important;
-        margin: 10px auto !important;
-        display: block;
-    }
-}
-
-.album img:hover{
-	transform: scale(1.02);
-}	
-   img[src*="soundcloud"] { 
-    width: 100px;
-    height: 50px;
-
-}	
-	img[src*="d&p"] { 
-    width: 125px;
-    height: 116px;
-
-}	
-img {
-    display: block;
-    margin: 0 auto;
-    border-radius: 20px;
-    box-shadow:0 0 0 5px var(--c1);
-    margin-bottom: 20px; 
-    user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-}
 hr {
     border: 0;
     height: 3px;
@@ -190,6 +57,87 @@ hr {
     margin: 20px 0;
     width: 100%; 
 }
+
+/* --- 2. NAVIGATION (NAV) --- */
+nav { 
+    font-family: 'Alegreya', serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 100; /* Assure que le nav reste au-dessus des autres éléments */
+}
+
+nav a {
+    text-decoration: none;
+    color: gold;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 8px 12px;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+}
+
+/* --- 3. ANIMATIONS & MARQUEE --- */
+@keyframes tv-glitch {
+    0% {
+        background-position: 50% 50%;
+        filter: hue-rotate(0deg);
+    }
+    20% {
+        background-position: 48% 52%;
+        filter: hue-rotate(90deg) contrast(150%);
+    }
+    40% {
+        background-position: 52% 48%;
+        filter: hue-rotate(0deg);
+    }
+    60% {
+        background-position: 49% 51%;
+        filter: invert(20%);
+    }
+    80% {
+        background-position: 51% 49%;
+        filter: hue-rotate(-90deg);
+    }
+    100% {
+        background-position: 50% 50%;
+        filter: hue-rotate(0deg);
+    }
+}
+
+marquee {
+    font-size: 45px;
+    padding: 30px;
+    color: gold;
+}
+
+marquee:hover {
+    background-image: url('bug_televiseur.jpg'); /* Mets le chemin relatif de ton image ici */
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    animation: tv-glitch 0.2s infinite steps(2);
+}
+
+/* --- 4. IMAGES ET GRILLE DES ALBUMS (VERSION PC) --- */
+img {
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 20px;
+    box-shadow: 0 0 0 5px var(--c1);
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
 .grille-albums {
     display: flex;
     flex-wrap: wrap;
@@ -198,32 +146,39 @@ hr {
 }
 
 .album {
-    /* 30% permet d'en caser 3 pile (30% x 3 = 90% + les espaces) */
-    width: 30% !important; 
+    width: 30%; 
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     margin-bottom: 40px;
 }
 
 .album img {
-    width: 335px; /* Taille fixe ou auto pour le PC */
+    width: 335px;
     height: auto;
 }
-summary span {
-    font-style: italic;
-}
-summary span {
-    font-weight: bold;
-}
-summary {
-    list-style: none;
-    cursor: pointer;
-}
+
+.album img:hover {
+    transform: scale(1.02);
+}    
+
+img[src*="soundcloud"] { 
+    width: 100px;
+    height: 50px;
+}    
+
+img[src*="d&p"] { 
+    width: 125px;
+    height: 116px;
+}    
+
 .album ol, .album ul {
-	font-family: Brutalista, sans-serif;
+    font-family: Brutalista, sans-serif;
 }
- .marque{--c1:#95B55E;}.marque ol,.marque ul{color:#95B55E;}
+
+/* --- 5. COULEURS THÉMATIQUES --- */
+.marque{--c1:#95B55E;}.marque ol,.marque ul{color:#95B55E;}
 .lacrize{--c1:#DCAB5E;}.lacrize ol,.lacrize ul{color:#DCAB5E;}
 .dmp{--c1:#888274;}.dmp ol,.dmp ul{color:white;}
 .lacriz{--c1:#D0A687;}.lacriz ol,.lacriz ul{color:#D0A687;}
@@ -264,17 +219,100 @@ summary {
 .vie{--c1:darkorange;}.vie ol,.vie ul{color:darkorange;}
 .vol8{--c1:darkorange;}.vol8 ol,.vol8 ul{color:darkorange;}
 .tp{--c1:#453818;}.tp ol,.tp ul{color:#453818;}
-.oubliez{--c1:#CC9FA2}.oubliez ol,.oubliez ul {color:#CC9FA2}
+.oubliez{--c1:#CC9FA2;}.oubliez ol,.oubliez ul{color:#CC9FA2;}
 .orga{--c1:turquoise;}.orga ol,.orga ul{color:turquoise;}
 .cla{--c1:turquoise;}.cla ol,.cla ul{color:turquoise;}
 .organi{--c1:turquoise;}.organi ol,.organi ul{color:turquoise;}
 
+/* --- 6. FOOTER --- */
 footer {
-	color: gold;
-	font-style: italic;
-	text-align: center;
-	margin-top: 50px; 
-	padding: 20px; 
-	font-size: 12px;
-	border-top: 1px solid gold;
+    color: gold;
+    font-style: italic;
+    text-align: center;
+    margin-top: 50px; 
+    padding: 20px; 
+    font-size: 12px;
+    border-top: 1px solid gold;
+}
+
+/* --- 7. OPTIMISATION MOBILE (< 768px) --- */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav {
+        gap: 12px;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    h1 { font-size: 20px; }
+    h2 { font-size: 18px; }
+
+    .grille-albums {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .album {
+        width: 100% !important;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .album summary {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .album img,
+    .album > summary img,
+    .album ol img {
+        width: 160px !important;
+        height: 160px !important;
+        object-fit: cover;
+        margin: 10px auto !important;
+        display: block;
+    }
+
+    .album summary p, 
+    .album summary span,
+    .album p {
+        font-size: 15px;
+        line-height: 1.4;
+        text-align: center;
+        width: 100%;
+    }
+
+    .album ol, .album ul {
+        padding-left: 0;
+        font-size: 14px;
+        list-style-position: inside;
+        text-align: center;
+    }
+
+    img[src*="soundcloud"], 
+    img[src*="spotify"], 
+    img[src*="d&p"] {
+        height: 35px !important;
+        max-width: 110px !important;
+        margin: 10px auto !important;
+        display: block;
+    }
 }
