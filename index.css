@@ -8,12 +8,12 @@
     padding: 0;
 }
 * {
-	 box-sizing: border-box; 
+	box-sizing: border-box;
+	color:gold ;
  }	 
 body {
     font-family: Brutalista, sans-serif;
-	background:#0062FF;
-    border: 25px solid #7E348B;         
+	background:black;         
     margin: 0; 
     min-height: 100vh; 
     padding: 40px; 
@@ -33,18 +33,20 @@ summary {
 }
 
 nav { 
-    font-family: Alegreya;
-	display: flex;
-    flex-wrap: wrap; /* Les liens passent à la ligne sur mobile */
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
+  font-family: 'Alegreya', serif;
+  display: flex;
+  flex-wrap: wrap; /* Les liens passent à la ligne sur mobile */
+  justify-content: space-between; /* Ou center selon ton besoin */
+  align-items: center;
+  padding: 15px 20px;
+  margin-bottom: 30px;
 }
+
 nav a {
-    text-decoration: none;
-    color: turquoise;
-    font-size: 28px;
-    font-weight: bold;
+  text-decoration: none;
+  color: gold;
+  font-size: 28px;
+  font-weight: bold;
 }
 nav a:hover {
 	transform: scale(1.2);
@@ -54,13 +56,55 @@ nav a:hover {
     height: 116px;
 
 }	
+header {
+	color: turquoise;
+	text-align: center;
+	padding: 20px; 
+} 
+marquee {
+	font-size: 45px;
+	padding: 30px;
+}
+@keyframes tv-glitch {
+	0% {
+		background-position: 50% 50%;
+		filter: hue-rotate(0deg);
+	}
+	20% {
+		background-position: 48% 52%;
+		filter: hue-rotate(90deg) contrast(150%);
+	}
+	40% {
+		background-position: 52% 48%;
+		filter: hue-rotate(0deg);
+	}
+	60% {
+		background-position: 49% 51%;
+		filter: invert(20%);
+	}
+	80% {
+		background-position: 51% 49%;
+		filter: hue-rotate(-90deg);
+	}
+	100% {
+		background-position: 50% 50%;
+		filter: hue-rotate(0deg);
+	}
+}
+
+marquee:hover {
+	background-image: url('file:///D:/jul/provisoire/bug televiseur.jpg');
+	background-size: 100% 100%; 
+	background-repeat: no-repeat;
+	animation: tv-glitch 0.2s infinite steps(2);
+}
+
+
 img {
     display: block;
     margin: 0 auto;
     border-radius: 20px;
-    box-shadow: 
-        0 0 0 5px #7E348B,
-        0 0 0 10px #014EA6;
+    box-shadow: 0 0 0 5px gold;
     margin-bottom: 20px; 
     user-select: none;
   -webkit-user-drag: none;
@@ -144,15 +188,15 @@ li {
 	border-radius: 100px;   
     box-shadow: none;
 }
-.cadre-Y {
-	border: 2px solid turquoise ;
-    border-radius: 5px
+.eny{
+	background: gold;
+	color: black;
 }	
 .ro {
 	perspective:500px;
 }	
 .img-roue {
-	border-radius: 100px;   
+	border-radius: 450px;   
     box-shadow: none;
     cursor: pointer;
     transition:transform 4s ease-in-out ;
@@ -163,11 +207,11 @@ li {
 }
 
 .img-y {
-	border-radius: 200px;
+	border-radius: 250px;
     cursor: pointer;
     transition:transform 1s ease-in-out ;
-	margin-bottom: 75px ;
-	margin-top: 75px;
+	margin-bottom: 125px ;
+	margin-top: 125px;
 }
 
 .img-y:hover{
@@ -185,11 +229,11 @@ li {
 	transform: scale(1.05);
 }
 footer {
-	color: turquoise;
+	color: gold;
 	font-style: italic;
 	text-align: center;
 	margin-top: 50px; 
 	padding: 20px; 
 	font-size: 12px;
-	border-top: 1px solid #00d1b2;
+	border-top: 1px solid gold;
 }
