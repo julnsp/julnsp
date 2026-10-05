@@ -95,7 +95,6 @@ li {
 /* --- 4. OPTIMISATION MOBILE (ÉCRANS < 768px) --- */
 @media (max-width: 768px) {
     body {
-        border: 4px solid #7E348B; 
         padding: 10px;
     }
 
