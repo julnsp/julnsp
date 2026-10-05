@@ -95,8 +95,7 @@ li {
 
 @media (max-width: 768px) {
     body {
-        border-width: 10px; 
-        border: 10px solid #0A841A; 
+        border-width: 10px;
         padding: 10px;
     }
 	nav a {
