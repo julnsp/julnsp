@@ -187,21 +187,24 @@ li {
         border-width: 10px;
         padding: 10px;
     }
+   @media (max-width: 768px) {
+
     nav {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px 10px; /* Espace très réduit entre les boutons */
-        margin-bottom: 15px; /* Moins d'espace en bas du menu */
-        padding: 5px;
+        grid-template-columns: repeat(3, auto); /* 3 colonnes ajustées au texte */
+        justify-content: center;                /* Centre l'ensemble du menu */
+        gap: 20px 25px;                        /* 20px entre les 2 lignes, 25px entre les 3 colonnes */
+        margin-bottom: 30px;
+        padding: 10px;
     }
 
     nav a {
-        font-size: 14px; /* Taille plus petite et plus discrète */
+        font-size: 28px;      /* Conservation exacte de la taille initiale */
+        white-space: nowrap;  /* Empeche le texte de couper sur 2 lignes */
         text-align: center;
-        padding: 6px 4px;
-        white-space: nowrap; /* Force le texte à rester sur une seule ligne */
     }
 
+}
     .nav-link {
         font-size: 14px; /* Ajuste aussi la classe si tu l'utilises sur tes liens */
     }
