@@ -24,6 +24,7 @@ h1, h2 {
 	word-wrap: break-word;
 	max-width: 100%;
 	text-align: center;
+	font-weight: 800;
 }
 
 summary {
@@ -32,7 +33,7 @@ summary {
 }
 
 nav { 
-  font-family: 'Alegreya', serif;
+  font-family: Brutalista, sans-serif;
   display: flex;
   flex-wrap: wrap; /* Les liens passent à la ligne sur mobile */
   justify-content: space-between; /* Ou center selon ton besoin */
@@ -49,6 +50,29 @@ nav a {
 }
 nav a:hover {
 	transform: scale(1.2);
+}
+.nav-link {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: gold;
+  cursor: pointer;
+  position: relative;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+}
+
+.nav-link span {
+  display: inline-block;
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.35s ease,
+    text-shadow 0.35s ease;
+}
+
+.nav-link span:hover {
+  transform: translateY(-8px);
+  text-shadow: 0 0 24px rgba(124, 108, 255, 0.55);
+  color: #ffffff;
 }
 	img[src*="d&p"] { 
     width: 125px;
@@ -107,11 +131,27 @@ li {
 
 @media (max-width: 768px) {
     body {
-        border-width: 10px;
+        border-width: 10px; 
+        border: 10px solid #7E348B; 
         padding: 10px;
     }
-	nav a {
-        font-size: 16px; /* Menu plus petit pour pas qu'il se chevauche */
+	 nav {
+        display: grid;
+        grid-template-columns: repeat(3, auto); /* 3 colonnes ajustées au texte */
+        justify-content: center;                /* Centre l'ensemble du menu */
+        gap: 20px 25px;                        /* 20px entre les 2 lignes, 25px entre les 3 colonnes */
+        margin-bottom: 30px;
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 28px;      /* Conservation exacte de la taille initiale */
+        white-space: nowrap;  /* Empeche le texte de couper sur 2 lignes */
+        text-align: center;
+    }
+
+    .nav-link {
+        font-size: 14px; /* Ajuste aussi la classe si tu l'utilises sur tes liens */
     }
 	h1 {
         font-size: 24px; /* Réduit le gros titre "Bienvenue..." */
