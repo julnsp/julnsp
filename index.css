@@ -17,14 +17,13 @@ body {
     margin: 0; 
     min-height: 100vh; 
     padding: 40px; 
-   
-	
 }
 h1, h2 {
     font-family: Brutalista, sans-serif;
 	word-wrap: break-word;
 	max-width: 100%;
 	text-align: center;
+	font-weight: 800;
 }
 
 summary {
@@ -33,7 +32,7 @@ summary {
 }
 
 nav { 
-  font-family: 'Alegreya', serif;
+  font-family: Brutalista, sans-serif;
   display: flex;
   flex-wrap: wrap; /* Les liens passent à la ligne sur mobile */
   justify-content: space-between; /* Ou center selon ton besoin */
@@ -56,6 +55,47 @@ nav a:hover {
     height: 116px;
 
 }	
+.nav-link {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: gold;
+  cursor: pointer;
+  position: relative;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+}
+
+.nav-link span {
+  display: inline-block;
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.35s ease,
+    text-shadow 0.35s ease;
+}
+
+.nav-link span:hover {
+  transform: translateY(-8px);
+  text-shadow: 0 0 24px rgba(124, 108, 255, 0.55);
+  color: #ffffff;
+}
+/* Style de base */
+.surnom {
+  display: inline-block;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: gold;
+  cursor: pointer;
+  letter-spacing: -0.03em;
+  /* Ajout de transform dans la transition pour la fluidité */
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.35s ease, text-shadow 0.35s ease;
+}
+
+/* Animation au survol */
+li:hover .surnom {
+  transform: translateY(-8px); /* <--- C'est cette ligne qui fait faire le bond vers le haut */
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 255, 255, 0.6);
+}
 header {
 	color: turquoise;
 	text-align: center;
@@ -64,6 +104,31 @@ header {
 marquee {
 	font-size: 45px;
 	padding: 30px;
+}
+.text {
+	font-size: clamp(3rem, 9vw, 5.5rem);
+	font-weight: 800;
+	color: #4a4e59;
+	cursor: pointer;
+	position: relative;
+	letter-spacing: -0.03em;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	letter-spacing: 0.05em;
+}
+
+.text span {
+	display: inline-block;
+	transition:
+		transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+		color 0.35s ease,
+		text-shadow 0.35s ease;
+}
+
+.text span:hover {
+	transform: scale(1.18) translateY(-8px);
+	text-shadow: 0 0 24px rgba(124, 108, 255, 0.55);
+	color: #ffffff;
 }
 @keyframes tv-glitch {
 	0% {
@@ -122,6 +187,19 @@ li {
         border-width: 10px;
         padding: 10px;
     }
+    nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes de largeur égale */
+        gap: 20px 15px;                       /* 20px d'espace vertical, 15px d'espace horizontal */
+        justify-items: center;                 /* Centre le texte dans chaque colonne */
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    nav a {
+        font-size: 18px;
+        text-align: center;
+    }
 	.signe {
         display: none !important; 
     }
@@ -138,9 +216,6 @@ li {
         border-radius: 10px;
 		margin-bottom: 40px;
 	    margin-top: 40px;
-    }
-	nav a {
-        font-size: 16px; /* Menu plus petit pour pas qu'il se chevauche */
     }
 	h1 {
         font-size: 24px; /* Réduit le gros titre "Bienvenue..." */
