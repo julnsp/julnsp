@@ -103,8 +103,6 @@ nav a:hover {
 }
 @media (max-width: 768px) {
     body {
-        border-width: 10px; 
-        border: 10px solid #0A841A; 
         padding: 10px;
     }
 	 nav {
