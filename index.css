@@ -187,8 +187,6 @@ li {
         border-width: 10px;
         padding: 10px;
     }
-   @media (max-width: 768px) {
-
     nav {
         display: grid;
         grid-template-columns: repeat(3, auto); /* 3 colonnes ajustées au texte */
@@ -204,7 +202,6 @@ li {
         text-align: center;
     }
 
-}
     .nav-link {
         font-size: 14px; /* Ajuste aussi la classe si tu l'utilises sur tes liens */
     }
