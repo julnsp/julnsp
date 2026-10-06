@@ -189,16 +189,21 @@ li {
     }
     nav {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 colonnes de largeur égale */
-        gap: 20px 15px;                       /* 20px d'espace vertical, 15px d'espace horizontal */
-        justify-items: center;                 /* Centre le texte dans chaque colonne */
-        align-items: center;
-        margin-bottom: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 10px; /* Espace très réduit entre les boutons */
+        margin-bottom: 15px; /* Moins d'espace en bas du menu */
+        padding: 5px;
     }
 
     nav a {
-        font-size: 18px;
+        font-size: 14px; /* Taille plus petite et plus discrète */
         text-align: center;
+        padding: 6px 4px;
+        white-space: nowrap; /* Force le texte à rester sur une seule ligne */
+    }
+
+    .nav-link {
+        font-size: 14px; /* Ajuste aussi la classe si tu l'utilises sur tes liens */
     }
 	.signe {
         display: none !important; 
