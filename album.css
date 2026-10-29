@@ -134,64 +134,61 @@ p:hover .titre-album {
 
     nav {
         display: grid;
-        grid-template-columns: repeat(3, auto); /* 3 colonnes ajustées au texte */
-        justify-content: center;                /* Centre l'ensemble du menu */
-        gap: 20px 25px;                         /* 20px entre les 2 lignes, 25px entre les 3 colonnes */
+        grid-template-columns: repeat(3, auto);
+        justify-content: center;
+        gap: 20px 25px;
         margin-bottom: 30px;
         padding: 10px;
     }
 
     nav a {
-        font-size: 28px;      /* Conservation exacte de la taille initiale */
-        white-space: nowrap;  /* Empeche le texte de couper sur 2 lignes */
+        font-size: 28px;
+        white-space: nowrap;
         text-align: center;
     }
 
     .nav-link {
-        font-size: 14px; /* Ajuste aussi la classe si tu l'utilises sur tes liens */
+        font-size: 14px;
     }
 
     h1 { font-size: 20px; }
     h2 { font-size: 18px; }
 
-    /* Layout responsive en 1 seule colonne pour aérer */
     .grille-albums {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centre les blocs albums horizontalement */
+        align-items: center;
         gap: 20px;
     }
 
     .album {
-        width: 100%; /* L'album prend toute la largeur */
-        max-width: 400px; /* Évite qu'il ne s'étale trop sur les écrans un peu plus larges */
+        width: 100%;
+        max-width: 400px;
         box-sizing: border-box;
         margin-bottom: 15px;
         padding: 15px;
-        text-align: center; /* Centre le texte et les éléments */
+        text-align: center;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centre les enfants en mode flex */
+        align-items: center; /* Centre parfaitement tous les enfants en mode flex */
     }
 
-    /* Correction pour que le summary se comporte bien et centre son contenu */
     .album summary {
         width: 100%;
         text-align: center;
-        list-style: none; /* Optionnel : enlève la puces par défaut si besoin */
+        list-style: none;
     }
 
-    /* Pochette d'album agrandie et centrée */
+    /* Pochette d'album parfaitement centrée */
     .album > summary img,
     .album ol img {
-        width: 140px; /* Taille fixe bien visible */
+        width: 140px;
         height: 140px;
         object-fit: cover;
         margin: 10px auto;
         display: block;
     }
 
-    /* Textes et listes plus lisibles et centrés */
     .album summary p, 
     .album summary span {
         font-size: 15px;
@@ -199,11 +196,19 @@ p:hover .titre-album {
         text-align: center;
     }
 
+    /* Correction cruciale pour les listes de featurings */
     .album ol, .album ul {
-        padding-left: 0;
+        margin: 0 auto;
+        padding: 0;
         font-size: 14px;
         list-style-position: inside;
         text-align: center;
+        width: 100%;
+    }
+
+    .album li {
+        text-align: center;
+        list-style-position: inside;
     }
 
     /* Icônes écoute/achat */
