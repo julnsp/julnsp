@@ -149,7 +149,7 @@ marquee:hover {
 	justify-content: space-between;
 	align-items: center;
 	padding: 15px 20px; 
-	margin-bottom: 20px;
+	margin-bottom: 500px;
 }
 .lindu:hover {
 	transform: scale(1.05);
