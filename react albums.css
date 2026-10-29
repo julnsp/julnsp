@@ -138,20 +138,3 @@ marquee:hover {
 	background-repeat: no-repeat;
 	animation: tv-glitch 0.2s infinite steps(2);
 }
-.video-container {
-    position: relative;
-    width: 100%;
-    max-width: 800px; /* Limite la taille maximale sur PC pour qu'elle ne soit pas géante */
-    margin: 30px auto; /* Centre la vidéo horizontalement et ajoute de l'espace autour */
-    padding-bottom: 56.25%; /* Ratio 16:9 (hauteur / largeur = 9/16 = 56.25%) */
-    height: 0;
-    overflow: hidden;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
