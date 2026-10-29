@@ -150,6 +150,9 @@ marquee:hover {
 	align-items: center;
 	padding: 15px 20px; 
 }
+.lien img {
+	margin-bottom:40 px;
+}
 .lindu:hover {
 	transform: scale(1.05);
 }
